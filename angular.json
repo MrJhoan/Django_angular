@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nombre-proyecto": {
+    "frontend_web_practica": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nombre-proyecto",
+            "outputPath": "dist/frontend_web_practica",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -22,7 +22,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [              
               "src/styles.css"
             ],
             "scripts": []
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nombre-proyecto:build:production"
+              "browserTarget": "frontend_web_practica:build:production"
             },
             "development": {
-              "browserTarget": "nombre-proyecto:build:development"
+              "browserTarget": "frontend_web_practica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nombre-proyecto:build"
+            "browserTarget": "frontend_web_practica:build"
           }
         },
         "test": {
@@ -90,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
